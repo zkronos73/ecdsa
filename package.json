@@ -1,0 +1,32 @@
+{
+  "name": "ecdsa",
+  "version": "0.0.1",
+  "description": "ECDSA implementation in C++",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "task": "node ./tasksfile.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.io/zkronos73/ecdsa"
+  },
+  "keywords": [
+    "ecdsa",
+    "prover",
+    "ethereum",
+    "rollup",
+    "zksnark",
+    "zero",
+    "knowledge",
+    "fast"
+  ],
+  "author": "zkronos73@gmail.com",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "tasksfile": "^5.1.1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
