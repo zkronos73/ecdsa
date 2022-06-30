@@ -23,7 +23,7 @@ function createFieldSources() {
     } else throw("Unsupported platform");
 }
 
-function buildEcdsa() {
+function build() {
     sh("g++" +
         " -I."+
         " -I../src"+
@@ -39,7 +39,7 @@ function buildEcdsa() {
         " fr.o"+
         " -o ecdsa" +
         " -Wall -Wno-sign-compare"+
-        " -O3 -fmax-errors=5 -std=c++17 -pthread -lgmp -lsodium", {cwd: "build", nopipe: true}
+        " -O3 -fmax-errors=5 -std=c++17 -pthread -lgmp -lgmpxx -lsodium -fopenmp", {cwd: "build", nopipe: true}
     );
 }
 
@@ -47,5 +47,5 @@ function buildEcdsa() {
 cli({
     cleanAll,
     createFieldSources,
-    buildEcdsa
+    build
 });
